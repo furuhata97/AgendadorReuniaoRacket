@@ -1,0 +1,564 @@
+00:01 testes/a
+seg 08:30-10:30 14:03-16:00 17:10-18:10
+ter 13:30-15:45
+qua 11:27-13:00 15:00-19:00
+sex 07:30-11:30 13:30-14:00 15:02-16:00 17:20-18:30
+
+00:01 testes/a testes/livre
+seg 08:30-10:30 14:03-16:00 17:10-18:10
+ter 13:30-15:45
+qua 11:27-13:00 15:00-19:00
+sex 07:30-11:30 13:30-14:00 15:02-16:00 17:20-18:30
+
+00:01 testes/a testes/ocupado
+
+00:01 testes/b
+seg 14:35-17:58
+ter 08:40-10:30 13:31-15:13
+qui 08:30-15:30
+sex 14:07-15:00 16:00-17:30 19:00-22:00
+
+00:01 testes/b testes/livre
+seg 14:35-17:58
+ter 08:40-10:30 13:31-15:13
+qui 08:30-15:30
+sex 14:07-15:00 16:00-17:30 19:00-22:00
+
+00:01 testes/b testes/ocupado
+
+00:01 testes/c
+seg 10:00-12:00 15:30-17:30
+sex 10:00-12:00 15:30-17:30
+
+00:01 testes/c testes/livre
+seg 10:00-12:00 15:30-17:30
+sex 10:00-12:00 15:30-17:30
+
+00:01 testes/c testes/ocupado
+
+00:01 testes/a testes/b
+seg 14:35-16:00 17:10-17:58
+ter 13:31-15:13
+sex 17:20-17:30
+
+00:01 testes/a testes/b testes/livre
+seg 14:35-16:00 17:10-17:58
+ter 13:31-15:13
+sex 17:20-17:30
+
+00:01 testes/a testes/b testes/ocupado
+
+00:01 testes/b testes/a
+seg 14:35-16:00 17:10-17:58
+ter 13:31-15:13
+sex 17:20-17:30
+
+00:01 testes/b testes/a testes/livre
+seg 14:35-16:00 17:10-17:58
+ter 13:31-15:13
+sex 17:20-17:30
+
+00:01 testes/b testes/a testes/ocupado
+
+00:01 testes/a testes/c
+seg 10:00-10:30 15:30-16:00 17:10-17:30
+sex 10:00-11:30 15:30-16:00 17:20-17:30
+
+00:01 testes/a testes/c testes/livre
+seg 10:00-10:30 15:30-16:00 17:10-17:30
+sex 10:00-11:30 15:30-16:00 17:20-17:30
+
+00:01 testes/a testes/c testes/ocupado
+
+00:01 testes/c testes/a
+seg 10:00-10:30 15:30-16:00 17:10-17:30
+sex 10:00-11:30 15:30-16:00 17:20-17:30
+
+00:01 testes/c testes/a testes/livre
+seg 10:00-10:30 15:30-16:00 17:10-17:30
+sex 10:00-11:30 15:30-16:00 17:20-17:30
+
+00:01 testes/c testes/a testes/ocupado
+
+00:01 testes/b testes/c
+seg 15:30-17:30
+sex 16:00-17:30
+
+00:01 testes/b testes/c testes/livre
+seg 15:30-17:30
+sex 16:00-17:30
+
+00:01 testes/b testes/c testes/ocupado
+
+00:01 testes/c testes/b
+seg 15:30-17:30
+sex 16:00-17:30
+
+00:01 testes/c testes/b testes/livre
+seg 15:30-17:30
+sex 16:00-17:30
+
+00:01 testes/c testes/b testes/ocupado
+
+00:01 testes/a testes/b testes/c
+seg 15:30-16:00 17:10-17:30
+sex 17:20-17:30
+
+00:01 testes/a testes/b testes/c testes/livre
+seg 15:30-16:00 17:10-17:30
+sex 17:20-17:30
+
+00:01 testes/a testes/b testes/c testes/ocupado
+
+00:01 testes/a testes/c testes/b
+seg 15:30-16:00 17:10-17:30
+sex 17:20-17:30
+
+00:01 testes/a testes/c testes/b testes/livre
+seg 15:30-16:00 17:10-17:30
+sex 17:20-17:30
+
+00:01 testes/a testes/c testes/b testes/ocupado
+
+00:01 testes/b testes/a testes/c
+seg 15:30-16:00 17:10-17:30
+sex 17:20-17:30
+
+00:01 testes/b testes/a testes/c testes/livre
+seg 15:30-16:00 17:10-17:30
+sex 17:20-17:30
+
+00:01 testes/b testes/a testes/c testes/ocupado
+
+00:01 testes/b testes/c testes/a
+seg 15:30-16:00 17:10-17:30
+sex 17:20-17:30
+
+00:01 testes/b testes/c testes/a testes/livre
+seg 15:30-16:00 17:10-17:30
+sex 17:20-17:30
+
+00:01 testes/b testes/c testes/a testes/ocupado
+
+00:01 testes/c testes/a testes/b
+seg 15:30-16:00 17:10-17:30
+sex 17:20-17:30
+
+00:01 testes/c testes/a testes/b testes/livre
+seg 15:30-16:00 17:10-17:30
+sex 17:20-17:30
+
+00:01 testes/c testes/a testes/b testes/ocupado
+
+00:01 testes/c testes/b testes/a
+seg 15:30-16:00 17:10-17:30
+sex 17:20-17:30
+
+00:01 testes/c testes/b testes/a testes/livre
+seg 15:30-16:00 17:10-17:30
+sex 17:20-17:30
+
+00:01 testes/c testes/b testes/a testes/ocupado
+
+00:30 testes/a
+seg 08:30-10:30 14:03-16:00 17:10-18:10
+ter 13:30-15:45
+qua 11:27-13:00 15:00-19:00
+sex 07:30-11:30 13:30-14:00 15:02-16:00 17:20-18:30
+
+00:30 testes/a testes/livre
+seg 08:30-10:30 14:03-16:00 17:10-18:10
+ter 13:30-15:45
+qua 11:27-13:00 15:00-19:00
+sex 07:30-11:30 13:30-14:00 15:02-16:00 17:20-18:30
+
+00:30 testes/a testes/ocupado
+
+00:30 testes/b
+seg 14:35-17:58
+ter 08:40-10:30 13:31-15:13
+qui 08:30-15:30
+sex 14:07-15:00 16:00-17:30 19:00-22:00
+
+00:30 testes/b testes/livre
+seg 14:35-17:58
+ter 08:40-10:30 13:31-15:13
+qui 08:30-15:30
+sex 14:07-15:00 16:00-17:30 19:00-22:00
+
+00:30 testes/b testes/ocupado
+
+00:30 testes/c
+seg 10:00-12:00 15:30-17:30
+sex 10:00-12:00 15:30-17:30
+
+00:30 testes/c testes/livre
+seg 10:00-12:00 15:30-17:30
+sex 10:00-12:00 15:30-17:30
+
+00:30 testes/c testes/ocupado
+
+00:30 testes/a testes/b
+seg 14:35-16:00 17:10-17:58
+ter 13:31-15:13
+
+00:30 testes/a testes/b testes/livre
+seg 14:35-16:00 17:10-17:58
+ter 13:31-15:13
+
+00:30 testes/a testes/b testes/ocupado
+
+00:30 testes/b testes/a
+seg 14:35-16:00 17:10-17:58
+ter 13:31-15:13
+
+00:30 testes/b testes/a testes/livre
+seg 14:35-16:00 17:10-17:58
+ter 13:31-15:13
+
+00:30 testes/b testes/a testes/ocupado
+
+00:30 testes/a testes/c
+seg 10:00-10:30 15:30-16:00
+sex 10:00-11:30 15:30-16:00
+
+00:30 testes/a testes/c testes/livre
+seg 10:00-10:30 15:30-16:00
+sex 10:00-11:30 15:30-16:00
+
+00:30 testes/a testes/c testes/ocupado
+
+00:30 testes/c testes/a
+seg 10:00-10:30 15:30-16:00
+sex 10:00-11:30 15:30-16:00
+
+00:30 testes/c testes/a testes/livre
+seg 10:00-10:30 15:30-16:00
+sex 10:00-11:30 15:30-16:00
+
+00:30 testes/c testes/a testes/ocupado
+
+00:30 testes/b testes/c
+seg 15:30-17:30
+sex 16:00-17:30
+
+00:30 testes/b testes/c testes/livre
+seg 15:30-17:30
+sex 16:00-17:30
+
+00:30 testes/b testes/c testes/ocupado
+
+00:30 testes/c testes/b
+seg 15:30-17:30
+sex 16:00-17:30
+
+00:30 testes/c testes/b testes/livre
+seg 15:30-17:30
+sex 16:00-17:30
+
+00:30 testes/c testes/b testes/ocupado
+
+00:30 testes/a testes/b testes/c
+seg 15:30-16:00
+
+00:30 testes/a testes/b testes/c testes/livre
+seg 15:30-16:00
+
+00:30 testes/a testes/b testes/c testes/ocupado
+
+00:30 testes/a testes/c testes/b
+seg 15:30-16:00
+
+00:30 testes/a testes/c testes/b testes/livre
+seg 15:30-16:00
+
+00:30 testes/a testes/c testes/b testes/ocupado
+
+00:30 testes/b testes/a testes/c
+seg 15:30-16:00
+
+00:30 testes/b testes/a testes/c testes/livre
+seg 15:30-16:00
+
+00:30 testes/b testes/a testes/c testes/ocupado
+
+00:30 testes/b testes/c testes/a
+seg 15:30-16:00
+
+00:30 testes/b testes/c testes/a testes/livre
+seg 15:30-16:00
+
+00:30 testes/b testes/c testes/a testes/ocupado
+
+00:30 testes/c testes/a testes/b
+seg 15:30-16:00
+
+00:30 testes/c testes/a testes/b testes/livre
+seg 15:30-16:00
+
+00:30 testes/c testes/a testes/b testes/ocupado
+
+00:30 testes/c testes/b testes/a
+seg 15:30-16:00
+
+00:30 testes/c testes/b testes/a testes/livre
+seg 15:30-16:00
+
+00:30 testes/c testes/b testes/a testes/ocupado
+
+01:00 testes/a
+seg 08:30-10:30 14:03-16:00 17:10-18:10
+ter 13:30-15:45
+qua 11:27-13:00 15:00-19:00
+sex 07:30-11:30 17:20-18:30
+
+01:00 testes/a testes/livre
+seg 08:30-10:30 14:03-16:00 17:10-18:10
+ter 13:30-15:45
+qua 11:27-13:00 15:00-19:00
+sex 07:30-11:30 17:20-18:30
+
+01:00 testes/a testes/ocupado
+
+01:00 testes/b
+seg 14:35-17:58
+ter 08:40-10:30 13:31-15:13
+qui 08:30-15:30
+sex 16:00-17:30 19:00-22:00
+
+01:00 testes/b testes/livre
+seg 14:35-17:58
+ter 08:40-10:30 13:31-15:13
+qui 08:30-15:30
+sex 16:00-17:30 19:00-22:00
+
+01:00 testes/b testes/ocupado
+
+01:00 testes/c
+seg 10:00-12:00 15:30-17:30
+sex 10:00-12:00 15:30-17:30
+
+01:00 testes/c testes/livre
+seg 10:00-12:00 15:30-17:30
+sex 10:00-12:00 15:30-17:30
+
+01:00 testes/c testes/ocupado
+
+01:00 testes/a testes/b
+seg 14:35-16:00
+ter 13:31-15:13
+
+01:00 testes/a testes/b testes/livre
+seg 14:35-16:00
+ter 13:31-15:13
+
+01:00 testes/a testes/b testes/ocupado
+
+01:00 testes/b testes/a
+seg 14:35-16:00
+ter 13:31-15:13
+
+01:00 testes/b testes/a testes/livre
+seg 14:35-16:00
+ter 13:31-15:13
+
+01:00 testes/b testes/a testes/ocupado
+
+01:00 testes/a testes/c
+sex 10:00-11:30
+
+01:00 testes/a testes/c testes/livre
+sex 10:00-11:30
+
+01:00 testes/a testes/c testes/ocupado
+
+01:00 testes/c testes/a
+sex 10:00-11:30
+
+01:00 testes/c testes/a testes/livre
+sex 10:00-11:30
+
+01:00 testes/c testes/a testes/ocupado
+
+01:00 testes/b testes/c
+seg 15:30-17:30
+sex 16:00-17:30
+
+01:00 testes/b testes/c testes/livre
+seg 15:30-17:30
+sex 16:00-17:30
+
+01:00 testes/b testes/c testes/ocupado
+
+01:00 testes/c testes/b
+seg 15:30-17:30
+sex 16:00-17:30
+
+01:00 testes/c testes/b testes/livre
+seg 15:30-17:30
+sex 16:00-17:30
+
+01:00 testes/c testes/b testes/ocupado
+
+01:00 testes/a testes/b testes/c
+
+01:00 testes/a testes/b testes/c testes/livre
+
+01:00 testes/a testes/b testes/c testes/ocupado
+
+01:00 testes/a testes/c testes/b
+
+01:00 testes/a testes/c testes/b testes/livre
+
+01:00 testes/a testes/c testes/b testes/ocupado
+
+01:00 testes/b testes/a testes/c
+
+01:00 testes/b testes/a testes/c testes/livre
+
+01:00 testes/b testes/a testes/c testes/ocupado
+
+01:00 testes/b testes/c testes/a
+
+01:00 testes/b testes/c testes/a testes/livre
+
+01:00 testes/b testes/c testes/a testes/ocupado
+
+01:00 testes/c testes/a testes/b
+
+01:00 testes/c testes/a testes/b testes/livre
+
+01:00 testes/c testes/a testes/b testes/ocupado
+
+01:00 testes/c testes/b testes/a
+
+01:00 testes/c testes/b testes/a testes/livre
+
+01:00 testes/c testes/b testes/a testes/ocupado
+
+01:30 testes/a
+seg 08:30-10:30 14:03-16:00
+ter 13:30-15:45
+qua 11:27-13:00 15:00-19:00
+sex 07:30-11:30
+
+01:30 testes/a testes/livre
+seg 08:30-10:30 14:03-16:00
+ter 13:30-15:45
+qua 11:27-13:00 15:00-19:00
+sex 07:30-11:30
+
+01:30 testes/a testes/ocupado
+
+01:30 testes/b
+seg 14:35-17:58
+ter 08:40-10:30 13:31-15:13
+qui 08:30-15:30
+sex 16:00-17:30 19:00-22:00
+
+01:30 testes/b testes/livre
+seg 14:35-17:58
+ter 08:40-10:30 13:31-15:13
+qui 08:30-15:30
+sex 16:00-17:30 19:00-22:00
+
+01:30 testes/b testes/ocupado
+
+01:30 testes/c
+seg 10:00-12:00 15:30-17:30
+sex 10:00-12:00 15:30-17:30
+
+01:30 testes/c testes/livre
+seg 10:00-12:00 15:30-17:30
+sex 10:00-12:00 15:30-17:30
+
+01:30 testes/c testes/ocupado
+
+01:30 testes/a testes/b
+ter 13:31-15:13
+
+01:30 testes/a testes/b testes/livre
+ter 13:31-15:13
+
+01:30 testes/a testes/b testes/ocupado
+
+01:30 testes/b testes/a
+ter 13:31-15:13
+
+01:30 testes/b testes/a testes/livre
+ter 13:31-15:13
+
+01:30 testes/b testes/a testes/ocupado
+
+01:30 testes/a testes/c
+sex 10:00-11:30
+
+01:30 testes/a testes/c testes/livre
+sex 10:00-11:30
+
+01:30 testes/a testes/c testes/ocupado
+
+01:30 testes/c testes/a
+sex 10:00-11:30
+
+01:30 testes/c testes/a testes/livre
+sex 10:00-11:30
+
+01:30 testes/c testes/a testes/ocupado
+
+01:30 testes/b testes/c
+seg 15:30-17:30
+sex 16:00-17:30
+
+01:30 testes/b testes/c testes/livre
+seg 15:30-17:30
+sex 16:00-17:30
+
+01:30 testes/b testes/c testes/ocupado
+
+01:30 testes/c testes/b
+seg 15:30-17:30
+sex 16:00-17:30
+
+01:30 testes/c testes/b testes/livre
+seg 15:30-17:30
+sex 16:00-17:30
+
+01:30 testes/c testes/b testes/ocupado
+
+01:30 testes/a testes/b testes/c
+
+01:30 testes/a testes/b testes/c testes/livre
+
+01:30 testes/a testes/b testes/c testes/ocupado
+
+01:30 testes/a testes/c testes/b
+
+01:30 testes/a testes/c testes/b testes/livre
+
+01:30 testes/a testes/c testes/b testes/ocupado
+
+01:30 testes/b testes/a testes/c
+
+01:30 testes/b testes/a testes/c testes/livre
+
+01:30 testes/b testes/a testes/c testes/ocupado
+
+01:30 testes/b testes/c testes/a
+
+01:30 testes/b testes/c testes/a testes/livre
+
+01:30 testes/b testes/c testes/a testes/ocupado
+
+01:30 testes/c testes/a testes/b
+
+01:30 testes/c testes/a testes/b testes/livre
+
+01:30 testes/c testes/a testes/b testes/ocupado
+
+01:30 testes/c testes/b testes/a
+
+01:30 testes/c testes/b testes/a testes/livre
+
+01:30 testes/c testes/b testes/a testes/ocupado
+
