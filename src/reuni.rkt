@@ -104,7 +104,7 @@
       [(and (< inicio-b inicio-a) (< inicio-a fim-b) (> fim-b fim-a)) (intervalo (horario hora-inicio-a minutos-inicio-a) (horario hora-fim-a minutos-fim-a))]
       [(and (= inicio-a inicio-b) (< fim-a fim-b)) (intervalo (horario hora-inicio-b minutos-inicio-b) (horario hora-fim-a minutos-fim-a))]
       [(and (= inicio-a inicio-b) (< fim-b fim-a)) (intervalo (horario hora-inicio-b minutos-inicio-b) (horario hora-fim-b minutos-fim-b))]
-      [(and (= inicio-a inicio-b) (= inicio-b fim-a)) a]))))
+      [(and (= inicio-a inicio-b) (= fim-b fim-a)) a]))))
 
 ;; list Intervalo, list Intervalo -> list Intervalo
 ;; Encontra a interseção dos intervalos de dispo-a e dispo-b.
@@ -112,8 +112,8 @@
   (cond
     [(empty? dispo-b) dispo-a]
     [(empty? dispo-a) empty]
-    [else (append (verifica-intervalo (first dispo-a) dispo-b)
-                (encontrar-dispo-em-comum (rest dispo-a) dispo-b))]))
+    [else (fezer-remocao (append (verifica-intervalo (first dispo-a) dispo-b)
+                (encontrar-dispo-em-comum (rest dispo-a) dispo-b)))]))
 
 ;; Horário, list dispo-semana -> dispo-semana
 ;; Esta função encontra os intervalos disponíveis para cada dia da semana que
@@ -138,6 +138,7 @@
 (define (encontrar-dispo-semana-em-comum tempo dispos)
   (cond
     [(empty? dispos) empty]
+    [(= (length dispos) 1) (first dispos)]
     [else (let ([dias-disponiveis (cons (encontra-dias-em-comum "dom" dispos)
                          (cons(encontra-dias-em-comum "seg" dispos)
                               (cons (encontra-dias-em-comum "ter" dispos)
@@ -145,7 +146,7 @@
                                           (cons (encontra-dias-em-comum "qui" dispos)
                                                 (cons (encontra-dias-em-comum "sex" dispos)
                                                       (encontra-dias-em-comum "sab" dispos)))))))])
-            (calcular-tempo tempo (remover-void (encontra-interseccao dias-disponiveis))))]))
+            (calcular-tempo tempo (encontra-interseccao dias-disponiveis)))]))
 
 (define (calcular-tempo tempo lst)
   (cond
@@ -170,11 +171,7 @@
       [(< (- fim-int inicio-int) duracao) intervalo-vazio]
       [(>= (- fim-int inicio-int) duracao) int])))
 
-(define (remover-void lst)
-  (cond
-    [(empty? lst) empty]
-    [else (cons (list (first (first lst))(fezer-remocao (second (first lst))))
-            (remover-void (rest lst)))]))
+
 
 (define (fezer-remocao lst)
   (cond
@@ -255,9 +252,8 @@
 (define (escrever-dispo dispo)
   (cond
     [(empty? dispo) ""]
-    [else (string-append (first (first dispo)) " " (converte-lista-intervalos (second (first dispo))) (if(not (empty? (rest dispo))) "\n" "") (escrever-dispo (rest dispo)))]))
+    [else (string-append (first (first dispo)) " " (converte-lista-intervalos (second (first dispo))) "\n" (escrever-dispo (rest dispo)))]))
 
-;;[else (string-append (list->string (map converte-number-caractere (first jogo))) (if(not (empty? (rest jogo))) "\n" "") (escrever-jogo (rest jogo)))]
 
 (define (converte-lista-intervalos lst)
   (cond
