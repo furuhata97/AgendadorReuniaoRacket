@@ -138,7 +138,7 @@
 (define (encontrar-dispo-semana-em-comum tempo dispos)
   (cond
     [(empty? dispos) empty]
-    [(= (length dispos) 1) (first dispos)]
+    [(= (length dispos) 1) (calcular-tempo tempo (first dispos))]
     [else (let ([dias-disponiveis (cons (encontra-dias-em-comum "dom" dispos)
                          (cons(encontra-dias-em-comum "seg" dispos)
                               (cons (encontra-dias-em-comum "ter" dispos)
@@ -258,6 +258,7 @@
 (define (converte-lista-intervalos lst)
   (cond
     [(empty? lst) ""]
+    [(empty? (rest lst)) (converte-intervalo (first lst))]
     [else (string-append (converte-intervalo (first lst)) " " (converte-lista-intervalos (rest lst)))]))
 
 (define (converte-intervalo int)
