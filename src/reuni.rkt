@@ -150,14 +150,6 @@
       [(>= (- fim-int inicio-int) duracao) int])))
 
 
-;; list Intervalo -> list Intervalo
-;; Percorre uma lista de intervalos fazendo a remoção de void.
-(define (fezer-remocao lst)
-  (cond
-    [(empty? lst) empty]
-    [else (if (intervalo-vazio? (first lst)) (fezer-remocao (rest lst)) (cons (first lst) (fezer-remocao (rest lst))))]))
-
-
 ;; list dispo -> list dispo
 ;; Recebe uma lista contendo as disponibilidades de cada pessoa nos dias em que elas possuem em comum e retorna as disponibilidades que possuem intersecção.
 ;; Cada elemento da lista recebida nesta função representa uma lista com as disponibilidades em comum de cada dia. Por exemplo, o primeiro elemento representa as
@@ -189,13 +181,13 @@
 ;; Recebe uma lista de intervalos a e b. É então feita uma chamada para a função verifica-intervalo passando o primeiro intervalo de dispo-a e a lista de intervalos dispo-b.
 ;; O retorno de verifica-intervalo será a intersecção entre o primeiro intervalo de dispo-a e todos os intervalos de dispo-b. Em seguida é feita uma chamada recursiva
 ;; a encontrar-dispo-em-comum passando o resto de dispo-a e a lista dispo-b. O processo irá se repetir, encontrando a intersecção entre o primeiro elemento do resto de dispo-a
-;; e a lista de intervalos de dispo-b. O resultado de tudo isso recebe um append. Quando não houver intersecção entre os intervalos, haverá um void. A função
-;; fazer-remocao é então chamada para remover o void das intersecções.
+;; e a lista de intervalos de dispo-b. O resultado de tudo isso recebe um append. Quando não houver intersecção entre os intervalos, haverá um void. É aplicado um filter para
+;; remover o void
 (define (encontrar-dispo-em-comum dispo-a dispo-b)
   (cond
     [(empty? dispo-b) dispo-a]
     [(empty? dispo-a) empty]
-    [else (fezer-remocao (append (verifica-intervalo (first dispo-a) dispo-b)
+    [else (filter intervalo? (append (verifica-intervalo (first dispo-a) dispo-b)
                 (encontrar-dispo-em-comum (rest dispo-a) dispo-b)))]))
 
 ;; Intervalo, list Intervalo -> list Intervalo
@@ -236,7 +228,8 @@
 
 ;; String, list dispo -> list dias-comum
 ;; Recebe uma string representando o dia procurado e a lista com as disponibilidades de todas as pessoas.
-;; Primeiro a função verifica-dias-em-comum é chamada para procurar na lista a disponibilidade de cada pessoa no dia desejado. O resultado é armazenado em dias-comum.
+;; Primeiro é feito um map que retorna os dias em comum entre as diferentes dispos. Quando não houver dia em comum é retornado #f. Depois é feito um filter para remover
+;; todos os #f. O resultado é armazenado em dias-comum.
 ;; Após isso, é verificado se o tamanho de dias-comum é menor que o tamanho da lista original, caso seja, é retornado vazio, caso não seja, é retornado dias-comum.
 ;; Essa verificação de tamanho ocorre para ver se a quantidade de dias em comum encontrados é igual a quantidade de pessoas. Por exemplo:
 ;; caso deseje-se verificar a disponibilidade de 2 pessoas A e B em uma quarta, e apenas a pessoa A possua horários na quarta, dias-comum terá tamanho 1, pois só
@@ -245,22 +238,8 @@
 (define (encontra-dias-em-comum dia lst)
   (cond
     [(empty? lst) empty]
-    [else (let ([dias-comum (verifica-dias-em-comum dia lst)])
+    [else (let ([dias-comum (filter list? (map(lambda(lst)(assoc dia lst))lst))])
             (if (< (length dias-comum) (length lst)) empty dias-comum))]))
-
-;; String, list dispo -> list dias-comum
-;; Recebe uma string representando o dia procurado e a lista com as disponibilidades de todas as pessoas.
-;; A funcão captura o primeiro elemento da lista, que representa todas as disponibilidades de uma pessoa. Então é verificado se nesse primeiro elemento há uma lista de
-;; associação contendo o dia procurado. Caso haja, é feito um cons com essa lista associativa e com a chamada recursiva da função, passando o resto da lista. O resto da
-;; lista representa o horário das outras  pessoas. Quando não houver uma lista associativa com o dia desejado, significa que a pessoa não possui disponibilidade
-;; neste dia, logo a função retorna vazio e evita a verificação do resto da lista caso esta ainda não tenho chegado ao fim.
-(define (verifica-dias-em-comum dia lst)
-  (cond
-    [(empty? lst) empty]
-    [else (if (assoc dia (first lst))
-              (cons (assoc dia (first lst))
-                           (verifica-dias-em-comum dia (rest lst)))
-              empty)]))
 
 
 
